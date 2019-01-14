@@ -1,0 +1,8 @@
+.idea/
+*.pyc
+*.nc
+*.tif
+*.img
+*.dat
+*.hdr
+*.xml
