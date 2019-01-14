@@ -68,8 +68,8 @@ class FY4A_H5(object):
             # DISK全圆盘数据和REGC中国区域数据区别在起始行号和终止行号
             channel = self.h5file[NOMChannelname].value[self.l - self.l_begin, self.c]
             #暂时处理
-            channel[channel == 65534] = np.nan
-            channel[channel == 65535] = np.nan
+            channel[channel == 65534] = 4095
+            channel[channel == 65535] = 4095
             CALChannel = self.h5file[CALChannelname].value  # 定标表
             # self.channels[channelname] = CALChannel[channel]  # 缺测值
             self.channelsValues.append(CALChannel[channel])
